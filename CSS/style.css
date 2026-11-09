@@ -1,0 +1,1241 @@
+
+/******************************************/
+/* GENERAL RESET */
+/******************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1;
+    font-weight: 400;
+    color: #555;
+}
+
+
+/******************************************/
+/* HEADER */
+/******************************************/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fdf2e9;
+
+    height: 9.6rem;
+    padding: 0 4.8rem;
+}
+
+.logo {
+    height: 2.4rem;
+    width: auto;
+}
+
+
+/******************************************/
+/* NAVIGATION */
+/******************************************/
+
+.main-nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+}
+
+.main-nav-list a:link,
+.main-nav-list a:visited {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1.8rem;
+    transition: all 0.3s;
+}
+
+.main-nav-list a:hover,
+.main-nav-list a:active {
+    color: #cf711f;
+}
+
+
+/******************************************/
+/* HERO SECTION */
+/******************************************/
+
+.section-hero {
+    background-color: #fdf2e9;
+
+    max-width: 130rem;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    gap: 9.6rem;
+
+    padding: 4.8rem 9.6rem 9.6rem;
+}
+
+
+/******************************************/
+/* HERO TEXT */
+/******************************************/
+
+.hero-text-box {
+    max-width: 60rem;
+}
+
+.heading-primary {
+    font-size: 5.2rem;
+    font-weight: 700;
+    line-height: 1.05;
+
+    letter-spacing: -0.05rem;
+
+    margin-bottom: 3.2rem;
+    color: #333;
+}
+
+.hero-description {
+    font-size: 2rem;
+    line-height: 1.6;
+
+    margin-bottom: 4.8rem;
+}
+
+
+/******************************************/
+/* BUTTONS */
+/******************************************/
+
+.btn:link,
+.btn:visited {
+    display: inline-block;
+
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+
+    padding: 1.6rem 3.2rem;
+    margin-right: 1.6rem;
+
+    border-radius: 0.9rem;
+
+    background-color: #e67e22;
+    color: white;
+
+    transition: all 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+    background-color: #cf711f;
+}
+
+.btn-secondary:link,
+.btn-secondary:visited {
+    background-color: white;
+    color: #555;
+}
+
+.btn-secondary:hover,
+.btn-secondary:active {
+    background-color: #fdf2e9;
+    box-shadow: inset 0 0 0 3px white;
+}
+
+
+/******************************************/
+/* DELIVERED MEALS */
+/******************************************/
+
+.delivered-meals {
+    display: flex;
+    align-items: center;
+
+    gap: 1.6rem;
+
+    margin-top: 8rem;
+}
+
+.delivered-imgs {
+    display: flex;
+}
+
+.delivered-imgs img {
+    height: 4.8rem;
+    width: 4.8rem;
+
+    border-radius: 50%;
+
+    margin-right: -1.6rem;
+
+    border: 3px solid #fdf2e9;
+}
+
+.delivered-text {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.delivered-text span {
+    color: #e67e22;
+    font-weight: 700;
+}
+
+
+/******************************************/
+/* HERO IMAGE */
+/******************************************/
+
+.hero-img-box {
+    width: 100%;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+}
+
+
+/******************************************/
+/* RESPONSIVE DESIGN */
+/******************************************/
+
+/* Smaller laptops */
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 56.25%;
+    }
+
+    .section-hero {
+        gap: 4.8rem;
+        padding: 4.8rem;
+    }
+
+}
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .section-hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 4.8rem 3.2rem;
+    }
+
+    .hero-text-box {
+        margin: 0 auto;
+    }
+
+    .delivered-meals {
+        justify-content: center;
+    }
+
+    .hero-img-box {
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
+}
+
+/* Mobile screens */
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 2rem;
+        height: 8rem;
+    }
+
+    .logo {
+        height: 2rem;
+    }
+
+    .main-nav-list {
+        gap: 1.2rem;
+    }
+
+    .main-nav-list a:link,
+    .main-nav-list a:visited {
+        font-size: 1.2rem;
+    }
+
+    .heading-primary {
+        font-size: 3.6rem;
+    }
+
+    .hero-description {
+        font-size: 1.6rem;
+    }
+
+    .section-hero {
+        padding: 4rem 2rem;
+    }
+
+    .delivered-meals {
+        flex-direction: column;
+        margin-top: 4rem;
+    }
+
+    .delivered-text {
+        font-size: 1.5rem;
+    }
+
+    .btn:link,
+    .btn:visited {
+        font-size: 1.5rem;
+        padding: 1.4rem 2rem;
+        margin-right: 0.5rem;
+    }
+
+}
+
+/******************************************/
+/* HOW IT WORKS SECTION */
+/******************************************/
+
+.section-how {
+    padding: 9.6rem 0;
+    background-color: #fff;
+}
+
+
+/******************************************/
+/* CONTAINER */
+/******************************************/
+
+.container {
+    max-width: 120rem;
+    padding: 0 3.2rem;
+    margin: 0 auto;
+}
+
+
+/******************************************/
+/* GRID */
+/******************************************/
+
+.grid {
+    display: grid;
+    column-gap: 6.4rem;
+    row-gap: 9.6rem;
+}
+
+.grid--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--center-v {
+    align-items: center;
+}
+
+
+/******************************************/
+/* SECTION HEADINGS */
+/******************************************/
+
+.subheading {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: #cf711f;
+    text-transform: uppercase;
+    margin-bottom: 1.6rem;
+    letter-spacing: 0.075rem;
+}
+
+.heading-secondary {
+    font-size: 4.4rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 9.6rem;
+}
+
+
+/******************************************/
+/* STEP TEXT */
+/******************************************/
+
+.step-text-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.step-number {
+    font-size: 8.6rem;
+    font-weight: 600;
+    color: #ddd;
+    margin-bottom: 1.2rem;
+}
+
+.heading-tertiary {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 3.2rem;
+}
+
+.step-description {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+
+/******************************************/
+/* STEP IMAGES */
+/******************************************/
+
+.step-image-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+.step-image-box::before,
+.step-image-box::after {
+    content: "";
+    display: block;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+}
+
+.step-image-box::before {
+    width: 60%;
+    padding-bottom: 60%;
+
+    background-color: #fdf2e9;
+
+    z-index: -2;
+}
+
+.step-image-box::after {
+    width: 45%;
+    padding-bottom: 45%;
+
+    background-color: #fae5d3;
+
+    z-index: -1;
+}
+
+.step-img {
+    width: 35%;
+    height: auto;
+}
+
+
+/******************************************/
+/* RESPONSIVE DESIGN */
+/******************************************/
+
+@media (max-width: 900px) {
+
+    .grid {
+        column-gap: 3.2rem;
+        row-gap: 6.4rem;
+    }
+
+    .heading-secondary {
+        font-size: 3.6rem;
+    }
+
+    .heading-tertiary {
+        font-size: 2.4rem;
+    }
+
+    .step-img {
+        width: 50%;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .section-how {
+        padding: 6.4rem 0;
+    }
+
+    .grid--2-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .heading-secondary {
+        font-size: 3.2rem;
+        margin-bottom: 4.8rem;
+    }
+
+    .step-number {
+        font-size: 6.4rem;
+    }
+
+    .step-text-box {
+        text-align: center;
+    }
+
+    .step-img {
+        width: 45%;
+    }
+
+    .step-image-box {
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+/******************************************/
+/* MEALS SECTION */
+/******************************************/
+
+.section-meals {
+    padding: 9.6rem 0;
+}
+
+/* THREE COLUMN GRID */
+
+.grid--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* MEAL CARD */
+
+.meal {
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+
+    transition: all 0.4s;
+}
+
+.meal:hover {
+    transform: translateY(-1.2rem);
+    box-shadow: 0 3.2rem 6.4rem rgba(0, 0, 0, 0.06);
+}
+
+/* MEAL IMAGE */
+
+.meal-image {
+    width: 100%;
+    height: 23rem;
+    object-fit: cover;
+    display: block;
+}
+
+/* MEAL CONTENT */
+
+.meal-content {
+    padding: 3.2rem 4.8rem 4.8rem;
+}
+
+/* TAGS */
+
+.meal-tags {
+    display: flex;
+    gap: 0.4rem;
+    margin-bottom: 1.2rem;
+}
+
+.tag {
+    display: inline-block;
+
+    padding: 0.4rem 0.8rem;
+
+    border-radius: 10rem;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.tag--vegetarian {
+    background-color: #51cf66;
+}
+
+.tag--vegan {
+    background-color: #94d82d;
+}
+
+.tag--paleo {
+    background-color: #ffd43b;
+}
+
+/* MEAL TITLE */
+
+.meal-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #333;
+
+    margin-bottom: 3.2rem;
+}
+
+/* MEAL ATTRIBUTES */
+
+.meal-attributes {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.meal-attribute {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+
+    font-size: 1.8rem;
+}
+
+.meal-icon {
+    color: #e67e22;
+    font-size: 2.6rem;
+    width: 2.4rem;
+}
+
+/* DIET LIST */
+
+.diets {
+    padding: 1rem 0;
+}
+
+.diets .heading-tertiary {
+    font-size: 2.4rem;
+    margin-bottom: 2.4rem;
+}
+
+.list {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+
+    font-size: 1.8rem;
+}
+
+.list li::before {
+    content: "✓";
+    color: #e67e22;
+    font-weight: 700;
+    margin-right: 1.2rem;
+}
+
+/******************************************/
+/* MEALS RESPONSIVE DESIGN */
+/******************************************/
+
+@media (max-width: 900px) {
+
+    .grid--3-cols {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .diets {
+        grid-column: 1 / -1;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .grid--3-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .meal-content {
+        padding: 2.4rem;
+    }
+
+    .diets {
+        grid-column: auto;
+    }
+
+}
+
+
+/******************************************/
+/* TESTIMONIALS SECTION */
+/******************************************/
+
+.section-testimonials {
+    background-color: #fdf2e9;
+
+    display: grid;
+    grid-template-columns: 55fr 45fr;
+    align-items: center;
+}
+
+
+/******************************************/
+/* LEFT SIDE */
+/******************************************/
+
+.testimonials-container {
+    padding: 6.4rem 9.6rem;
+}
+
+.testimonials-container .heading-secondary {
+    max-width: 65rem;
+    margin-bottom: 9.6rem;
+}
+
+
+/******************************************/
+/* CUSTOMER GRID */
+/******************************************/
+
+.testimonials {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 6.4rem;
+    row-gap: 4.8rem;
+}
+
+.testimonial-img {
+    width: 6.4rem;
+    height: 6.4rem;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+    margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+    font-size: 1.6rem;
+    color: #777;
+}
+
+
+/******************************************/
+/* RIGHT SIDE GALLERY */
+/******************************************/
+
+.gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 1.2rem;
+
+    padding: 1.2rem;
+
+    width: 100%;
+    align-content: center;
+}
+
+.gallery-item {
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+}
+
+.gallery-item img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+    transform: scale(1.1);
+}
+
+
+/******************************************/
+/* RESPONSIVE DESIGN */
+/******************************************/
+
+@media (max-width: 1200px) {
+
+    .testimonials-container {
+        padding: 6.4rem 4.8rem;
+    }
+
+    .testimonials {
+        column-gap: 3.2rem;
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .section-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .testimonials-container {
+        padding: 6.4rem 2.4rem;
+    }
+
+    .testimonials {
+        grid-template-columns: 1fr;
+        row-gap: 4rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+        padding: 0.6rem;
+    }
+
+}
+
+
+/******************************************/
+/* CTA SECTION */
+/******************************************/
+
+.section-cta {
+    padding: 9.6rem 0;
+    background-color: #fff;
+}
+
+
+/******************************************/
+/* CTA CARD */
+/******************************************/
+
+.cta {
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    background-image: linear-gradient(
+        to right bottom,
+        #eb984e,
+        #e67e22
+    );
+
+    border-radius: 1.1rem;
+
+    overflow: hidden;
+
+    box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+}
+
+
+/******************************************/
+/* CTA TEXT BOX */
+/******************************************/
+
+.cta-text-box {
+    padding: 4.8rem 6.4rem 6.4rem;
+
+    color: #45260a;
+}
+
+
+/* CTA HEADING */
+
+.cta .heading-secondary {
+    color: #45260a;
+
+    margin-bottom: 3.2rem;
+}
+
+
+/* CTA DESCRIPTION */
+
+.cta-text {
+    font-size: 1.8rem;
+    line-height: 1.8;
+
+    margin-bottom: 4.8rem;
+}
+
+
+/******************************************/
+/* CTA FORM */
+/******************************************/
+
+.cta-form {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    column-gap: 3.2rem;
+    row-gap: 2.4rem;
+}
+
+
+/* LABELS */
+
+.cta-form label {
+    display: block;
+
+    font-size: 1.6rem;
+    font-weight: 600;
+
+    margin-bottom: 1.2rem;
+}
+
+
+/* INPUTS AND SELECT */
+
+.cta-form input,
+.cta-form select {
+
+    width: 100%;
+
+    padding: 1.2rem;
+
+    font-size: 1.8rem;
+
+    font-family: inherit;
+
+    color: inherit;
+
+    border: none;
+
+    background-color: #fdf2e9;
+
+    border-radius: 0.9rem;
+
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* INPUT PLACEHOLDER */
+
+.cta-form input::placeholder {
+    color: #aaa;
+}
+
+
+/* FORM BUTTON */
+
+.btn-form {
+    align-self: end;
+
+    width: 100%;
+
+    border: none;
+
+    cursor: pointer;
+
+    background-color: #45260a;
+
+    color: #fdf2e9;
+
+    font-family: inherit;
+
+    font-size: 2rem;
+
+    font-weight: 600;
+
+    padding: 1.2rem;
+
+    border-radius: 0.9rem;
+
+    transition: all 0.3s;
+}
+
+
+.btn-form:hover {
+    background-color: #fff;
+
+    color: #555;
+}
+
+
+/******************************************/
+/* CTA IMAGE */
+/******************************************/
+
+.cta-img-box {
+
+    background-image: linear-gradient(
+        to right bottom,
+        rgba(235, 151, 78, 0.20),
+        rgba(230, 125, 34, 0.20)
+    ),
+    url("../img/toni-koraza-r_VLi4NDa9c-unsplash.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+}
+
+
+/******************************************/
+/* RESPONSIVE DESIGN */
+/******************************************/
+
+@media (max-width: 900px) {
+
+    .cta {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .cta-text-box {
+        padding: 3.2rem;
+    }
+
+    .cta-form {
+        column-gap: 1.6rem;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .cta {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-img-box {
+        height: 32rem;
+        grid-row: 1;
+    }
+
+    .cta-text-box {
+        padding: 3.2rem 2.4rem;
+    }
+
+    .cta-form {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/******************************************/
+/* FOOTER SECTION */
+/******************************************/
+
+.footer {
+    padding: 12.8rem 0;
+    border-top: 1px solid #eee;
+}
+
+
+/******************************************/
+/* FOOTER GRID */
+/******************************************/
+
+.footer-grid {
+    display: grid;
+
+    grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+
+    column-gap: 6.4rem;
+}
+
+
+/******************************************/
+/* LOGO COLUMN */
+/******************************************/
+
+.logo-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo {
+    display: block;
+    margin-bottom: 3.2rem;
+}
+
+.footer-logo-img {
+    height: 2.4rem;
+    width: auto;
+}
+
+
+/******************************************/
+/* SOCIAL LINKS */
+/******************************************/
+
+.social-links {
+    list-style: none;
+
+    display: flex;
+    gap: 2.4rem;
+
+    margin-bottom: auto;
+}
+
+.social-icon {
+    height: 2.4rem;
+    width: 2.4rem;
+
+    color: #767676;
+
+    transition: all 0.3s;
+}
+
+.footer-link:hover .social-icon {
+    color: #cf711f;
+}
+
+
+/******************************************/
+/* COPYRIGHT */
+/******************************************/
+
+.copyright {
+    font-size: 1.4rem;
+    line-height: 1.6;
+
+    color: #767676;
+
+    margin-top: 8rem;
+}
+
+
+/******************************************/
+/* FOOTER HEADINGS */
+/******************************************/
+
+.footer-heading {
+    font-size: 1.8rem;
+    font-weight: 600;
+
+    margin-bottom: 4rem;
+
+    color: #555;
+}
+
+
+/******************************************/
+/* CONTACT DETAILS */
+/******************************************/
+
+.contacts {
+    font-style: normal;
+
+    font-size: 1.6rem;
+    line-height: 1.6;
+}
+
+.address {
+    margin-bottom: 2.4rem;
+}
+
+
+/******************************************/
+/* FOOTER NAVIGATION */
+/******************************************/
+
+.footer-nav {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 2.4rem;
+}
+
+
+/******************************************/
+/* FOOTER LINKS */
+/******************************************/
+
+.footer-link:link,
+.footer-link:visited {
+    text-decoration: none;
+
+    font-size: 1.6rem;
+
+    color: #767676;
+
+    transition: all 0.3s;
+}
+
+.footer-link:hover,
+.footer-link:active {
+    color: #555;
+}
+
+
+/******************************************/
+/* RESPONSIVE FOOTER */
+/******************************************/
+
+@media (max-width: 900px) {
+
+    .footer-grid {
+        grid-template-columns: repeat(3, 1fr);
+
+        row-gap: 5rem;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .footer {
+        padding: 6.4rem 0;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        row-gap: 4.8rem;
+    }
+
+    .logo-col {
+        grid-column: 1 / -1;
+    }
+
+    .copyright {
+        margin-top: 4rem;
+    }
+
+}
+
+
+
